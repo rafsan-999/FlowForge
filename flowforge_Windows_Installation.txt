@@ -1,0 +1,58 @@
+Documentation link: https://flowfuse.com/docs/install/local/
+
+
+Prerequisites
+
+Operating System
+The install script has been tested against the following operating systems:
+Windows 10 & 11
+
+Node.js
+FlowForge requires Node.js v16.
+
+Node.js website here:
+https://nodejs.org/en/download
+
+#### Windows Installing command for FlowForge:
+
+mkdir c:\flowforge
+
+Download the latest Installer zip file into a temporary location.
+Unzip the downloaded zip file and copy its contents to the FlowForge directory
+
+cd c:\temp
+tar -xf flowforge-installer.zip
+xcopy /E /I flowforge-installer c:\flowforge
+
+cd c:\flowforge
+install.bat
+
+
+Installing as a service (optional)
+On Linux, the installer will ask if you want to run FlowForge as a service. This will mean it starts automatically whenever you restart your device.
+If you select this option, it will ask if you want to run the service as the current user, or create a new flowforge user. If you choose to create the user, it will also change the ownership of the FlowForge directory to that user.
+
+
+#####Configuring FlowForge
+The default FlowForge configuration is provided in the file flowforge.yml
+
+Windows: c:\flowforge\etc\flowforge.yml
+
+The default configuration file already contains everything you need to get started with FlowForge.
+
+It will allow you to access FlowForge and the Node-RED instances you create, from the same server running the platform. If you want to allow access from other devices on the network, you must edit the configuration file and change the host setting to 0.0.0.0 and change base_url to contain the IP address of the server.
+
+NOTE: We do not support changing the host and base_url values once you have created an instance. For more information on all of the options available, see the configuration guide.
+
+
+##Running FlowForge
+c:\flowforge\bin\flowforge.bat
+
+First-run Setup
+Following a successful install, you will be able to access the platform to go through the initial setup.
+
+1. Start setup
+- LocalFS
+Open FlowForge in your browser http://localhost:3000.
+
+
