@@ -112,6 +112,10 @@ Or to run as a service:
 # Linux
 
         service flowforge start
+        
+## Check Flowforge status
+
+        systemctl status flowforge
 
 # First Run Setup
 
@@ -120,4 +124,27 @@ Following a successful install, you will be able to access the platform to go th
 
 1. Start setup
 Open FlowForge in your browser http://localhost:3000.
+
+
+# Uninstall FlowForge
+Type the following command and press Enter to uninstall FlowForge:
+
+        sudo apt remove flowforge
+This command will remove the FlowForge package from your system.
+
+### Remove Configuration Files
+If you want to remove the configuration files associated with FlowForge, you can use the following command:
+
+        sudo apt purge flowforge
+This will remove the package as well as its configuration files.
+
+## Update Package List
+After uninstalling FlowForge, it's a good idea to update your package list to ensure your system is up-to-date:
+
+        sudo apt update
+
+
+
+
+
 
